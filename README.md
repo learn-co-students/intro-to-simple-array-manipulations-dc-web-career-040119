@@ -1,42 +1,63 @@
-## Objectives
+def using_push(countries_in_western_africa, next_country)
+  countries_in_western_africa = ["Benin", "Carpe Verde", "Gambia", "Liberia", "Mali"]
+  next_country = "Niger"
+  countries_in_western_africa.push(next_country)
+end
 
-1. Become comfortable using the official documentation of the Ruby Language.
-2. Gain proficiency performing simple array manipulations.
-3. Gain proficiency understanding the result of method calls on arrays.
+ def using_unshift(neighborhoods_in_northwest_brooklyn, new_neighborhood)
+  neighborhoods_in_northwest_brooklyn = ["Brooklyn Yards", "Cadman Plaza", "Clinton Hill", "Downtown Brooklyn", "DUMBO"]
+  @new_neighborhood = "Brooklyn Heights"
+  neighborhoods_in_northwest_brooklyn.unshift(@new_neighborhood)
+end
 
+ def using_pop(great_hits_of_the_nineties)
+  @great_hits_of_the_nineties = ["Baby One More Time", "Smells Like Teen Spirit", "Missing", "Walking On The Sun", "Hard Knock Life", "Losing My Religion"]
+  @great_hits_of_the_nineties.pop
+end
 
-# Introduction To Simple Array Manipulations
+ def pop_with_args(chars_in_game_of_thrones)
+  @chars_in_game_of_thrones = ["Danny T.", "Tyrion Lannister", "Stable Boy", "Sandor Clegane, aka The Mountain"]
+  @chars_in_game_of_thrones.pop(2)
+end
 
-In a previous lab, you learned how to create arrays and access the elements of an array. Now you are ready to manipulate arrays using different Ruby methods.
+ def using_shift(my_favorite_cities)
+  @my_favorite_cities = ["Lagos", "Cape Town", "Nairobi", "San Francisco", "Gaborone", "New York", "Berlin", "London"]
+  @im_so_over_this_city = @my_favorite_cities.shift
+end
 
-## Instructions
+ def shift_with_args(ice_cream_brands)
+  @ice_cream_brands = ["Blue Bell Creameries", "Ben & Jerry's", "Baskin Robbins", "Braum's", "Breyer's"]
+  @brands_removed = @ice_cream_brands.shift(2)
+end
 
-Fork and clone this lab. Run `learn` to see the initial test failures, then write the required methods in the `lib/introduction_to_simple_array_manipulation.rb` file to get the tests to pass. 
+ def using_concat(my_favorite_things, more_favs)
+  @my_favorite_things = ["raindrops on roses", "whiskers on kittens"]
+  more_favs = ["mario kart", "flatiron school"]
+  @all_my_favs = @my_favorite_things.concat(more_favs)
+end
 
-Consult the official documentation of the [Ruby Language](http://ruby-doc.org/core-2.2.0/) for the methods you need to use to solve the problems in this lab.
+ def using_insert(list_of_esoteric_programming_languages, another_esoteric_language)
+  @list_of_esoteric_programming_languages = ["Ante", "ArnoldC", "Befunge", "Binary lambda calculus", "Chef", "GolfScript", "Ook!"]
+  @another_esoteric_language = "Malbolge"
+  @new_array = @list_of_esoteric_programming_languages.insert(4, @another_esoteric_language)
+end
 
-As you read the method descriptions, make sure to pay attention to understanding what the method returns. For instance, when you call `.push` on an array, it returns the updated array:
+ def using_uniq(captain_planet_and_the_planeteers)
+  captain_planet_and_the_planeteers = ["Captain Planet", "Gaia", "Kwame", "Gi", "Linka", "Wheeler", "Gaia"]
+  new_array = captain_planet_and_the_planeteers.uniq
+end
 
-```ruby
-artists = ["Hozier", "Ariana Grande", "Usher"]
-next_artist = "Beyonce"
-artists.push(next_artist)
-# => ["Hozier", "Ariana Grande", "Usher", "Beyonce"]
-```
+ def using_flatten(private_colleges_in_newyork)
+  private_colleges_in_newyork = ["New York University", ["Manhattan School of Music ", "Columbia University"], "The Juilliard School", "Bard College", "Cooper Union"]
+  flat_array = private_colleges_in_newyork.flatten
+end
 
-However, `.pop` works a little differently; it *removes* (and returns) the last element from an array:
+ def using_delete(my_list, my_element)
+  my_list.delete(my_element)
+end
 
-```ruby
-artists = ["Frida Kahlo", "Pablo Picasso", "Cai Guo-Qiang"]
-artists.pop
-# => "Cai Guo-Qiang"
-
-artists
-# => ["Frida Kahlo", "Pablo Picasso"]
-```
-
-You can see that while `.pop` removes `"Cai Guo-Qiang"` from the `artists` array, `.pop` also supplies `"Cai Guo-Qiang"` as its return.
-
-**Top-tip:** *One of the most common problems you will encounter on your journey to becoming a software developer is not knowing what object a method returns. For example, you might assume that the result of a method call is a string but instead it is an array.*  
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-simple-array-manipulations' title='Objectives'>Objectives</a> on Learn.co and start learning to code for free.</p>
+ def using_delete_at(famous_robots, integer)
+  famous_robots = ["the dog from doctor who", "R2D2", "Ultron"]
+  integer = 2
+  deleted_robot = famous_robots.delete_at(integer)
+end
